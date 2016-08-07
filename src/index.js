@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import secret_keys from '../secrets'
+
+const API_KEY = secret_keys.youtube_api;
+
 // Create a new component.  This component should produce
 // some HTML
 const App = () => {
