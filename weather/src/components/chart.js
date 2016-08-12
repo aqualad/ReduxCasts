@@ -8,19 +8,20 @@ function average(data) {
 
 const Chart = (props) => {
     return (
-        <div className="chart">
+        <div>
             <Sparklines height={120} width={180} data={props.data}>
                 <SparklinesLine color={props.color} />
                 <SparklinesReferenceLine type="avg" />
             </Sparklines>
-            <div>{average(props.data)}</div>
+            <div>{average(props.data)} {props.units}</div>
         </div>
     );
 }
 
 Chart.propTypes = {
     data: PropTypes.array,
-    color: PropTypes.string
+    color: PropTypes.string,
+    units: PropTypes.string
 };
 
 export default Chart;
